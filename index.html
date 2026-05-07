@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pakistan VIP Ultra Website</title>
+
+<style>
+body{margin:0;font-family:Arial;}
+
+header{ 
+background:green; 
+color:white; 
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:15px;
+position:relative;
+overflow:hidden;
+}
+
+header::before{
+content:"🇵🇰";
+position:absolute;
+font-size:80px;
+opacity:0.1;
+animation:move 5s infinite linear;
+}
+
+@keyframes move{
+0%{left:-10%;}
+100%{left:110%;}
+}
+
+/* VIP NAV */
+.vip-nav{
+display:flex;
+flex-direction:column;
+gap:8px;
+margin-top:10px;
+}
+
+.nav-row{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.nav-card{
+background:rgba(255,255,255,0.1);
+color:white;
+padding:10px 18px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+border:1px solid white;
+box-shadow:0 0 10px white;
+transition:0.3s;
+backdrop-filter:blur(5px);
+}
+
+.nav-card:hover{
+background:white;
+color:green;
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 0 20px white, 0 0 40px green;
+}
+
+/* EXTRA BUTTON */
+.extra-btn{
+text-align:center;
+margin:10px;
+}
+
+.extra-btn a{
+display:inline-block;
+padding:10px 25px;
+background:linear-gradient(45deg, #00ffcc, #0077ff);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+box-shadow:0 0 10px green;
+}
+
+/* SECTIONS */
+.section{
+display:none;
+padding:40px;
+min-height:80vh;
+background:linear-gradient(green,white);
+}
+
+.active{display:block;}
+
+.anthem{background:green;color:white;text-align:center;}
+.person{background:#eaffea;}
+
+/* FOOTER */
+footer{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+background:green;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:10px;
+border-radius:10px;
+width:200px;
+text-align:center;
+}
+
+.card img{
+width:100px;
+height:100px;
+border-radius:50%;
+}
+</style>
+
+<script>
+function show(id){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h2>Zaigham Ali 🇵🇰</h2>
+
+<nav class="vip-nav">
+
+<div class="nav-row">
+<a onclick="show('home')" class="nav-card">Home</a>
+<a onclick="show('about')" class="nav-card">About</a>
+<a onclick="show('person')" class="nav-card">Famous Personalities</a>
+<a onclick="show('books')" class="nav-card">Allama Iqbal books</a>
+</div>
+
+<div class="nav-row">
+<a onclick="show('anthem')" class="nav-card">National anthem</a>
+<a onclick="show('gallery')" class="nav-card">Gallery</a>
+<a onclick="show('national song')"class="nav-card">National song</a>
+</div>
+
+</nav>
+</header>
+
+<!-- ICON BUTTON ONLY (NO TEXT) -->
+<div class="extra-btn">
+<a onclick="show('anthem')" title="National Song"></a>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section active">
+<h1>Welcome to Pakistan Website 💚 I am Pakistani and i love for Pakistan</h1>
+</div>
+
+<!-- ABOUT (FULL ORIGINAL - UNCHANGED) -->
+<div id="about" class="section">
+<h1>About Pakistan 🇵🇰</h1>
+
+<p>
+🇵🇰 Pakistan – Complete History & Overview (From Creation to Present)
+
+Pakistan was created on 14 August 1947 as a result of a long political struggle by the Muslims of the Indian subcontinent. The idea of a separate homeland was first strongly presented by Allama Muhammad Iqbal in his 1930 Allahabad Address, where he suggested a separate Muslim state in northwest India. Later, Muhammad Ali Jinnah led the movement under the banner of the All India Muslim League and successfully achieved independence for Muslims, resulting in the creation of Pakistan.
+
+At the time of independence, Pakistan faced many serious challenges. The country had no strong administrative system, very limited financial resources, and millions of refugees migrating from India. Despite these difficulties, the nation began building itself from scratch.
+
+In the early years, Pakistan had to face political instability and leadership challenges. Muhammad Ali Jinnah became the first Governor-General, but he passed away shortly after independence in 1948. Liaquat Ali Khan became the first Prime Minister and worked to establish government institutions.
+
+🇵🇰 Early Wars & Conflicts
+
+1. 1947–48 Kashmir War  
+2. 1965 Indo-Pak War  
+3. 1971 War  
+4. 1999 Kargil Conflict  
+
+🛡️ Military Strength & Defense  
+Pakistan Armed Forces: Army, Air Force, Navy  
+Pakistan became nuclear power in 1998.
+
+🏏 Sports Achievements  
+1992 World Cup Winner  
+2017 Champions Trophy Winner  
+
+💰 Economy & Society  
+Agriculture, textiles, services sector.
+
+🕌 Culture  
+Urdu, Punjabi, Sindhi, Pashto, Balochi.
+
+⚠️ Challenges  
+Inflation, politics, disasters.
+
+💚 Present Day Pakistan  
+Technology, education, defense progress.
+
+🇵🇰 Final Summary  
+Pakistan is built on struggle, sacrifice, and unity.
+</p>
+</div>
+
+<!-- ANTHEM -->
+<div id="anthem" class="section anthem">
+   <h1>قومی ترانہ 🇵🇰</h1> <p> پاک سرزمین شاد باد<br> کشور حسین شاد باد<br> تو نشان عزم عالی شان<br> ارض پاکستان<br><br> مرکز یقین شاد باد<br> پاک سرزمین کا نظام<br> قوت اخوت عوام<br> قوم، ملک، سلطنت<br> پائندہ تابندہ باد<br><br> شاد باد منزل مراد<br> پرچم ستارہ و ہلال<br> رہبر ترقی و کمال<br> ترجمان ماضی، شان حال<br> جان استقبال<br><br> سایۂ خدائے ذوالجلال </p> </div>
+
+<!-- PERSONALITIES (FULL ORIGINAL - UNCHANGED) -->
+ <div id="person" class="section person"> 
+  <h1>Famous Personalities 🇵🇰</h1> <h2>Quaid-e-Azam (25 December 1876 to 11 September 1948)</h2> <p>👤 1. Muhammad Ali Jinnah Muhammad Ali Jinnah Muhammad Ali Jinnah, widely known as Quaid-e-Azam, was the founder of Pakistan and one of the most influential political leaders in South Asian history. He was born on 25 December 1876 in Karachi. His early education started in Karachi, and later he traveled to London to study law at Lincoln’s Inn, where he became a qualified barrister. Jinnah started his political career in the Indian National Congress. At that time, he believed in Hindu-Muslim unity. However, after observing political differences and growing concerns about Muslim rights, he joined the All India Muslim League. Over time, he became the strongest voice for the Muslims of India. His leadership style was extremely disciplined. He believed in constitutional struggle rather than violence. Jinnah worked tirelessly to secure a separate homeland for Muslims, which eventually led to the creation of Pakistan in 1947. He became the first Governor-General of Pakistan. He was known for his: Strong personality and leadership skills Discipline and punctual lifestyle Sharp legal mind Commitment to justice and equality In his personal life, Jinnah was simple but elegant. He preferred neat dressing, usually wearing a suit or sherwani. Despite his political pressure, he always remained calm and focused. Unfortunately, his health declined shortly after independence due to tuberculosis. He passed away on 11 September 1948 in Karachi. His mausoleum (Mazar-e-Quaid) is located in Karachi. He is remembered as: Father of the Nation Quaid-e-Azam (Great Leader) His vision and struggle shaped the destiny of millions.</p> <h2>Allama Iqbal (9 November 1877 to 21 April 1938)</h2> <p>👤 2. Allama Muhammad Iqbal Allama Muhammad Iqbal Allama Muhammad Iqbal was a philosopher, poet, and thinker who is considered the spiritual founder of Pakistan. He was born on 9 November 1877 in Sialkot, British India. From a young age, he showed great interest in poetry and philosophy. He studied in Sialkot, Lahore, and later traveled to Europe for higher education. He studied philosophy in Cambridge and completed his doctorate in Germany. His exposure to Western philosophy deeply influenced his thinking. Iqbal’s poetry focused on self-realization, spirituality, and empowerment of Muslims. His concept of “Khudi” (selfhood) encouraged individuals to develop confidence, discipline, and self-respect. He wrote several famous poetry collections: Bang-e-Dara Bal-e-Jibril Zarb-e-Kaleem Asrar-e-Khudi He believed that Muslims needed a separate homeland where they could live according to their values and religion. This idea later became the foundation of Pakistan. Iqbal’s personality was deeply intellectual and spiritual. He spent most of his time reading, writing, and thinking about society and human behavior. He was also a strong supporter of Muslim unity. He passed away on 21 April 1938 in Lahore. His tomb is located near Badshahi Mosque. He is remembered as: Mufakkir-e-Pakistan (The Thinker of Pakistan) Shair-e-Mashriq (Poet of the East) </p> <h2>Fatima Jinnah (31 July 1893 to 9 July 1967)</h2> <p>Fatima Jinnah Fatima Jinnah was a Pakistani dental surgeon, biographer, and one of the leading figures in the Pakistan Movement. She was born on 31 July 1893 in Karachi. She was the younger sister of Muhammad Ali Jinnah. She studied dentistry in Calcutta and later in England, becoming one of the first Muslim women dentists in the subcontinent. However, she later left her professional career to support her brother in politics. Fatima Jinnah played a major role in supporting the All India Muslim League. She stood beside Quaid-e-Azam during the struggle for Pakistan and worked for the welfare and unity of Muslims. She was known for: Strong moral character Courage and dedication Support for women rights Loyalty to Pakistan movement After independence, she continued to serve the nation and became a symbol of women empowerment in Pakistan. In 1965, she contested presidential elections against Ayub Khan, becoming a symbol of democracy. She passed away on 9 July 1967 in Karachi. She is remembered as: Madar-e-Millat (Mother of the Nation)</p> <h2>Liaquat Ali Khan</h2> <p>First Prime Minister Liaquat Ali Khan Liaquat Ali Khan was one of the most important founding leaders of Pakistan and served as the first Prime Minister of the country. He was born on 1 October 1895 in Karnal, British India (now in India). He belonged to a noble and educated family and received his early education in Aligarh Muslim University, one of the most prestigious institutions of that time. Later, he went to Oxford University in England, where he studied law and politics. From an early stage of his life, Liaquat Ali Khan showed a strong interest in public service and politics. After returning to India, he joined the All India Muslim League in 1923. He quickly became one of the closest and most trusted companions of Muhammad Ali Jinnah. His loyalty, intelligence, and organizational skills made him a key figure in the Pakistan Movement. During the struggle for independence, Liaquat Ali Khan worked tirelessly to promote the idea of a separate homeland for Muslims. He helped organize political meetings, delivered powerful speeches, and managed party affairs. His role became especially important during the 1940s when the demand for Pakistan became stronger. After the creation of Pakistan in 1947, he was appointed as the first Prime Minister of the country. This was a very difficult time because Pakistan was a newly born state facing many challenges such as refugee crisis, financial instability, and lack of administrative structure. Despite these difficulties, Liaquat Ali Khan worked with dedication to stabilize the country. He introduced several important reforms: He presented the Objectives Resolution in 1949, which became the foundation of Pakistan’s constitution. He worked to build government institutions from scratch. He tried to maintain strong foreign relations. He focused on economic stability and national unity. Liaquat Ali Khan was known for his honesty, discipline, and strong leadership. He lived a simple life and avoided corruption. His leadership style was calm and thoughtful, and he always tried to make decisions in the best interest of the nation. Unfortunately, his political journey was cut short. On 16 October 1951, he was assassinated during a public meeting in Rawalpindi. His death was a huge loss for Pakistan, as he was guiding the young nation through its most critical years. He is remembered as: Quaid-e-Millat (Leader of the Nation) First Prime Minister of Pakistan</p> <h2>Abdul Sattar Edhi (28 February 1928 to 8 July 2016)</h2> <p>Humanitarian Abdul Sattar Edhi Abdul Sattar Edhi was one of the greatest humanitarian figures in the world and is widely respected for his selfless service to humanity. He was born on 28 February 1928 in Bantva, a small town in Gujarat, British India. After the partition of 1947, he migrated to Pakistan and settled in Karachi with very limited resources. His early life was very simple and full of struggles. He experienced poverty, which deeply influenced his thinking and motivated him to help the poor and needy. He believed that humanity is above religion, caste, and nationality. In 1951, he established the Edhi Foundation, which started as a small dispensary but later grew into one of the largest welfare organizations in Pakistan. The foundation provides services such as: Free ambulance service Orphanages Hospitals and clinics Shelters for homeless people Burial services for unclaimed bodies Edhi personally drove ambulances and took care of patients himself. He did not believe in luxury or personal wealth. His lifestyle was extremely simple — he owned only a few clothes and lived in a small room above his office. He was known for: Compassion and kindness Selfless service Dedication to humanity Strong moral character His work earned international recognition, and he received several awards for humanitarian services. Despite opportunities, he never entered politics or business because he believed his mission was only to serve humanity. Abdul Sattar Edhi passed away on 8 July 2016 in Karachi. After his death, millions of people attended his funeral, showing the love and respect he had earned throughout his life. He is remembered as: Angel of Mercy Father of Free Social Welfare in Pakistan Symbol of humanity and kindness</p> <h2>Dr Abdul Qadeer Khan (1 April 1936 to 10 October 2021)</h2> <p>Nuclear scientist Abdul Qadeer Khan Dr. Abdul Qadeer Khan was a famous Pakistani nuclear scientist who played a key role in making Pakistan a nuclear power. He was born on 1 April 1936 in Bhopal, British India. After the partition, his family migrated to Pakistan and settled in Karachi. He studied metallurgical engineering in Europe, first in West Germany and later in Belgium. He also worked in the Netherlands in a nuclear research laboratory, where he gained deep knowledge about uranium enrichment technology. In 1974, after India conducted its nuclear test, Pakistan decided to develop its own nuclear program for defense purposes. Dr. Abdul Qadeer Khan returned to Pakistan and joined the national nuclear project. He played a central role in developing uranium enrichment technology at Kahuta Research Laboratories (KRL). His contribution was extremely important because it allowed Pakistan to become a nuclear power. In 1998, Pakistan successfully conducted nuclear tests in response to India, making the country the first Muslim nuclear power in the world. He is known for: Scientific intelligence Dedication to national defense Leadership in nuclear research Contribution to Pakistan’s security However, his career also faced controversies related to nuclear technology transfer, and he was placed under investigation. Later, he was pardoned and continued to be respected as a national hero. Dr. Abdul Qadeer Khan passed away on 10 October 2021 in Islamabad. He is remembered as: Father of Pakistan’s Nuclear Program National hero and scientist</p> <h2>Benazir Bhutto (21 June 1953 to 27 December 2007)</h2> <p>First female PM Benazir Bhutto Benazir Bhutto was one of the most influential political leaders in Pakistan’s history and the first woman to become Prime Minister of a Muslim country. She was born on 21 June 1953 in Karachi, Pakistan, into a highly political and respected family. Her father, Zulfikar Ali Bhutto, was also a former Prime Minister of Pakistan and founder of the Pakistan Peoples Party (PPP). Growing up in such an environment, Benazir was exposed to politics, leadership discussions, and national issues from a very young age. She received her early education in Pakistan and later went abroad for higher studies. She studied at Harvard University in the United States, where she developed strong analytical and leadership skills. After that, she went to Oxford University in the United Kingdom, where she studied Philosophy, Politics, and Economics. During her time in Oxford, she became more politically aware and confident about her future role in Pakistan. Benazir Bhutto entered politics after the execution of her father in 1979 under the military rule of General Zia-ul-Haq. This event deeply affected her and motivated her to continue her father’s political mission. She became the leader of the Pakistan Peoples Party and started struggling for democracy in Pakistan. During this time, she also faced imprisonment and house arrest multiple times due to her political activities. In 1988, after years of struggle, Benazir Bhutto became the Prime Minister of Pakistan, making history as the first female Prime Minister of a Muslim country. Her government focused on modernization, women empowerment, education, and healthcare. She worked to improve Pakistan’s international relations and economic development. However, her political journey was not smooth. Her government faced opposition, political challenges, and accusations of corruption, which led to her dismissal. Despite this, she remained a strong political figure and was elected again as Prime Minister in 1993. Her second term also faced political instability and ended in 1996. Benazir Bhutto spent several years in exile, living in Dubai and London due to political cases in Pakistan. During exile, she continued to lead her party and remained active in politics. In 2007, she returned to Pakistan to participate in elections and promote democracy once again. Unfortunately, on 27 December 2007, she was assassinated in Rawalpindi during a political rally. Her death shocked the entire world and created nationwide mourning in Pakistan. Benazir Bhutto is remembered as: A symbol of democracy First female Prime Minister of Pakistan A strong political leader A courageous woman who fought for her beliefs</p> <h2>Imran Khan (5 October 1952 to (alive)</h2> <p>Cricketer & leader Imran Khan Imran Khan is one of Pakistan’s most well-known personalities, famous both as a world-class cricketer and a political leader. He was born on 5 October 1952 in Lahore, Pakistan, into a well-educated Pashtun family. His early education was completed in Lahore, and later he went to the United Kingdom for higher studies. He studied at Oxford University, where he developed his interest in politics and leadership along with his sports career. Imran Khan became a professional cricketer in the 1970s and quickly rose to international fame as a fast bowler and all-rounder. He became the captain of the Pakistan cricket team in 1982. Under his leadership, Pakistan achieved many historic victories. His greatest achievement came in 1992 when he led Pakistan to win the ICC Cricket World Cup. This victory made him a national hero and one of the greatest cricketers in the world. After retiring from cricket, Imran Khan decided to enter politics. In 1996, he founded his political party, Pakistan Tehreek-e-Insaf (PTI). At the beginning, his political career faced many challenges, and his party struggled to gain popularity. However, he continued to work on social welfare projects and public awareness campaigns. One of his most important contributions outside politics is the establishment of Shaukat Khanum Memorial Cancer Hospital and Research Centre in Lahore. This hospital provides free treatment to poor cancer patients and is considered one of his greatest humanitarian achievements. Imran Khan’s political journey took a major turn in the 2010s when PTI gained massive popularity among the youth of Pakistan. His campaign focused on anti-corruption, justice, education reforms, and welfare state principles. Due to his strong public support, he became the Prime Minister of Pakistan in 2018. As Prime Minister, he focused on economic reforms, poverty reduction, health insurance programs, and foreign policy improvements. His government introduced initiatives like “Ehsaas Program” to support poor families and “Sehat Insaf Card” for free healthcare services. However, his government also faced challenges such as economic inflation, political opposition, and global financial pressures. Despite difficulties, he remained a strong and influential political figure. In 2022, he was removed from office through a no-confidence vote, but he continued to remain active in politics and maintained strong public support. Imran Khan is remembered as: World Cup winning cricket captain Founder of PTI Former Prime Minister of Pakistan Social worker and philanthropist One of Pakistan’s most influential modern leaders</p> </div>
+
+<!-- BOOKS -->
+<div id="books" class="section person">
+   <h1>📚 Allama Iqbal Books</h1> <!-- 📚 BOOKS SECTION (2-COLUMN VIP LAYOUT) --> <style> .book-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:12px; } .book-card{ background:white; border:2px solid green; border-radius:10px; padding:10px; text-align:center; box-shadow:0 0 10px rgba(0,0,0,0.2); transition:0.3s; } .book-card:hover{ transform:scale(1.05); box-shadow:0 0 20px green; } .book-card a{ text-decoration:none; color:green; font-weight:bold; } @media(max-width:600px){ .book-grid{ grid-template-columns:1fr; } } </style> <div class="book-grid"> <div class="book-card"><h3>Bang-e-Dara</h3><a href="Bang e Dara.pdf">Read Here</a></div> <div class="book-card"><h3>Bal-e-Jibril</h3><a href="Bal-e-Jibreel (Allama Muhammad Iqbal).pdf">Read Here</a></div> <div class="book-card"><h3>Zarb-e-Kaleem</h3><a href="Zarb-e-Kaleem (Allama Muhammad Iqbal).pdf">Read Here</a></div> <div class="book-card"><h3>Asrar-e-Khudi</h3><a href="Asrar e Khudi (urdu manzoom tarjumah) by Allama Muhammad Iqbal.pdf">Read Here</a></div> <div class="book-card"><h3>Rumuz-e-Bekhudi</h3><a href="Ramooz E Bekhudi (urdu translation) by Allama Iqbal.pdf">Read Here</a></div> <div class="book-card"><h3>Payam-e-Mashriq</h3><a href="Payam-e-Mashriq - Allama Iqbal.pdf">Read Here</a></div> <div class="book-card"><h3>Zabur-e-Ajam</h3><a href="Sharah-Zabur-e-Ajam-Abdul-Hameed-Yazdani.pdf">Read Here</a></div> <div class="book-card"><h3>Javid Nama</h3><a href="Iqbal-Javidnama-Urdu-Tr-Rafiq-Khawar-IAP-1976.pdf">Read Here</a></div> <div class="book-card"><h3>Armaghan-e-Hijaz</h3><a href="2021.pdf">Read Here</a></div> <div class="book-card"><h3>Reconstruction of Religious Thought</h3><a href="757.pdf">Read Here</a></div> <div class="book-card"><h3>Stray Reflections</h3><a href="844.pdf">Read Here</a></div> <div class="book-card"><h3>Letters of Iqbal</h3><a href="LettersOfAllamaIqbalToQuaidEAzamMuhamamdAliJinnah.pdf">Read Here</a></div> <div class="book-card"><h3>Speeches & Statements</h3><a href="649E.pdf">Read Here</a></div> </div> </div> <!-- 📚 END --> </div> </div>
+
+<!-- GALLERY -->
+<div id="gallery" class="section person">
+   <h1>Gallery</h1> <div class="gallery-grid"> <div class="gallery-card"> <img src="download (3).jpg"> <h3>Quaid-e-Azam</h3> </div> <div class="gallery-card"> <img src="download (4).jpg"> <h3>Allama Iqbal</h3> </div> <div class="gallery-card"> <img src="download (5).jpg"> <h3>Fatima Jinnah</h3> </div> <div class="gallery-card"> <img src="download.jpg"> <h3>Liaquat Ali Khan</h3> </div> <div class="gallery-card"> <img src="download (1).jpg"> <h3>Abdul Sattar Edhi</h3> </div> <div class="gallery-card"> <img src="download (2).jpg"> <h3>Abdul Qadeer Khan</h3> </div> <div class="gallery-card"> <img src="5-1545902044.png"> <h3>Benazir Bhutto</h3> </div> <div class="gallery-card"> <img src="chairman-pakistan-tehreek-e-insaf-260nw-2403830523.webp"> <h3>Imran Khan</h3> </div> </div> </d>
+<footer>
+<div class="card">
+<img src="Allama iqbal.jpg">
+<h3>Allama Iqbal</h3>
+</div>
+
+<div class="card">
+<img src="Quaid-e-Azam.jpg">
+<h3>Quaid-e-Azam</h3>
+</div>
+
+<div class="card">
+<img src="Fatima jinnha.jpg">
+<h3>Fatima Jinnah</h3>
+</div>
+</footer>
+
+<h2 style="text-align:center; color:green;">Pakistan Zindabad 💚</h2>
+
+</body> 
+</html> yar is mai mujhay songs add kardo is kay button mai  add karao 20 musics national anthem ok aur jaha per mujhya pate karnay hai waha per # yai nishan bna do ok or pura code vip kar do
